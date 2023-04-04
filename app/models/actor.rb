@@ -1,3 +1,3 @@
-class Actor < ApplicationController
+class Actor < ApplicationRecord
 
 end
