@@ -1,8 +1,29 @@
 <h1>List of all directors</h1>
 
 <table border="1">
-  <% @list_of_directors.each do |a_thing| %>
+  <tr>
+    <td>
+      <strong>ID</strong>
+    </td>
 
+    <td>
+      <strong>Image</strong>
+    </td>
+
+    <td>
+      <strong>Name</strong>
+    </td>
+
+    <td>
+      <strong>DOB</strong>
+    </td>
+
+    <td>
+      <strong> </strong>
+    </td>
+  </tr>
+  
+  <% @list_of_directors.each do |a_thing| %>
     <tr>
       <td>
         <%= a_thing.id %>
@@ -16,8 +37,8 @@
         <%= a_thing.name %>
       </td>
 
-      <td><
-        %= a_thing.dob %>
+      <td>
+        <%= a_thing.dob %>
       </td>
 
       <td>
