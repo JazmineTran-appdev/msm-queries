@@ -1,0 +1,102 @@
+<h1>Actor #<%= @actor_id %> details</h1>
+
+<a href="/actors">Go back</a>
+
+<hr>
+
+<dl>
+  <dt>
+    Name
+  </dt>
+  <dd>
+    <%= @actor.name %>
+  </dd>
+
+  <dt>
+    Dob
+  </dt>
+  <dd>
+    <%= @actor.dob %>
+  </dd>
+
+  <dt>
+    Bio
+  </dt>
+  <dd>
+    <%= @actor.bio %>
+  </dd>
+
+  <dt>
+    Image
+  </dt>
+  <dd>
+    <img src="<%= @actor.image %>">
+  </dd>
+
+  <dt>
+    Created at
+  </dt>
+  <dd>
+    <%= time_ago_in_words(@actor.created_at) %> ago
+  </dd>
+
+  <dt>
+    Updated at
+  </dt>
+  <dd>
+    <%= time_ago_in_words(@actor.updated_at) %> ago
+  </dd>
+</dl>
+
+<hr>
+
+<h2>Filmography</h2>
+
+<table border="1">
+  <tr>
+    <td>
+      <strong>Title</strong>
+    </td>
+
+    <td>
+      <strong>Year</strong>
+     </td>
+
+    <td>
+      <strong>Director</strong>
+    </td>
+
+    <td>
+      <strong>Character name</strong>
+    </td>
+
+    <td>
+      <strong> </strong>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <%= @movie.title %>
+    </td>
+
+    <td>
+      <%= @movie.year %>
+    </td>
+
+    <td>
+      <%= @director.name %>
+    </td>
+
+    <td>
+      <%= @character.name %>
+    </td>
+
+    <td>
+      <a href="/movies/<%= @movie.id %>">
+        Show details
+      </a>
+    </td>
+  </tr>
+
+</table>
